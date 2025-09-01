@@ -14,6 +14,7 @@
 
 // 可选：引入 Eigen（推荐）
 #include <Eigen/Dense>
+#define M_PI 3.141593
 
 namespace KDL {
 
