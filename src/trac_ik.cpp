@@ -31,11 +31,12 @@ namespace TRAC_IK {
         assert(chain_.getNrOfJoints() == joint_min_.data.size());
         assert(chain_.getNrOfJoints() == joint_max_.data.size());
 
+
         for (size_t i = 0; i < chain_.segments.size(); i++) {
             std::string type = chain_.segments[i].getJoint().getTypeName();
             if (type.find("Rot") != std::string::npos) {
-                if (joint_max_(i) >= std::numeric_limits<double>::infinity() ||
-                    joint_min_(i) <= -std::numeric_limits<double>::infinity())
+                if (joint_max_(joint_types_.size()) >= std::numeric_limits<double>::infinity() ||
+                    joint_min_(joint_types_.size()) <= -std::numeric_limits<double>::infinity())
                     joint_types_.push_back(KDL::BasicJointType::Continuous);
                 else
                     joint_types_.push_back(KDL::BasicJointType::RotJoint);

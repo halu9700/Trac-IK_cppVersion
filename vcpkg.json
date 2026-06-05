@@ -1,0 +1,15 @@
+{
+  "name" : "trac-ik-cppversion",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "c01dc6ea7353758f2ed70df0bc29c97dfc650b3a",
+  "dependencies" : [ {
+    "name" : "nlopt",
+    "version>=" : "2.10.1"
+  }, {
+    "name" : "eigen3",
+    "version>=" : "5.0.1"
+  }, {
+    "name" : "orocos-kdl",
+    "version>=" : "1.5.3"
+  } ]
+}
